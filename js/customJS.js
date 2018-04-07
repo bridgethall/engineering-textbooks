@@ -5,19 +5,24 @@ $( document ).ready(function() {
     }
 });
 
+var id;
+
 function move() {
     var elem = document.getElementById("bar"); 
     var width = 1;
-    var id = setInterval(frame, 40);
+    clearInterval(id);
+    id = setInterval(frame, 40);
     function frame() {
         if (width >= 100) {
             clearInterval(id);
-        } else if (width >= 70) {
+        } else if (width >= 90) {
             width = 30;
+        } else if (width > 40 && width < 89){
+            width = width + 0.5 ;             
         } else {
-            width++; 
-            elem.style.width = width + '%'; 
+            width++;
         }
+        elem.style.width = width + '%'; 
     }
 }
 
