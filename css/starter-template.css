@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'comicsans';
-  src: url('fonts/comicsans.otf') format('opentype');
+  src: url('../fonts/comicsans.otf') format('opentype');
 }
 .comicsans {
   font-family: 'comicsans';
